@@ -1,0 +1,81 @@
+
+body{
+background-color: white;}
+p{
+    text-align: center;
+}
+.section{
+    font-size: 20px;
+    border: 4px solid rgba(114, 17, 17, 0.781);
+    border-radius: 5px;
+}
+.breadcrumb-item{
+    font-size: 14px;
+}
+.section a{
+    color: white;
+
+}
+.section a:hover{
+    color: rgb(192, 3, 3);
+    text-decoration: none;
+}
+.section img{
+    width: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.363);
+}
+
+.section .col1,.col2{
+    width: 100%;
+    cursor: pointer;
+    	transition-property: all;
+    	transition-duration: 0.5s;
+    	transition-timing-function: ease;
+}
+.section .col1:hover,.col2:hover{
+    transform: scale(1.1);
+}
+span.chop{
+    font-style: italic;
+    color: rgb(175, 8, 8);
+    font-weight: bolder;
+}
+h2{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    border: 4px solid rgba(114, 17, 17, 0.781);
+    background-color: rgb(226, 34, 34);
+}
+
+
+/*จอipad*/
+@media screen and (max-width: 992px) {
+    .section h3{
+        font-size: 1.5em;
+    }
+    .section p{
+        font-size: 1em;
+    }
+    .section .row .col2 a .img2{
+        margin-top: -10px;
+    }
+    .section .row2,.row3,.row4{
+        margin-top: 30px
+    }
+}
+@media screen and (max-width: 767px) {
+    .section h3{
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    .section p{
+        font-size: 0.8em;
+    }
+    .section .row .col1 a .img1{
+        margin-top: -9px;
+    }
+    .section .row .col2 a .img2{
+        margin-top: -20px;
+    }
+}

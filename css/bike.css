@@ -1,0 +1,71 @@
+.section h3{
+    text-align: left;
+    font-size: 30px;
+}
+.section h5{
+ font-size: 18px;
+}
+.section h5>a{
+    color: red;
+}
+.section h5>a:hover{
+    color: rgb(255, 0, 0);
+}
+.section a{
+    color: black;
+    font-size: 18px;
+}
+.section a:hover{
+    color: black;
+}
+.section img{
+    width: 100%;
+}
+.section .row .col1 a .img1{
+    margin-top: -1px;
+}
+
+
+
+
+
+
+/*จอipad*/
+@media screen and (max-width: 1024px) {
+    section h3{
+        font-size: 1.5em;
+    }
+    section p{
+        font-size: 1em;
+    }
+    section .row .col2 a .img2{
+        margin-top: -80px;
+    }
+    section .row2,.row3,.row4,.row5{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 576px) {
+    section h3{
+        font-size: 1.2em;
+    }
+    section p{
+        font-size: 0.8em;
+    }
+    section .col .btn{
+        font-size: 0.3em;
+        width: 10%;
+    }
+    section h5,h5>a{
+        font-size: 0.8em;
+    }
+    section .row .col1 a .img1{
+        margin-top: -9px;
+    }
+    section .row .col2 a .img2{
+        margin-top: -80px;
+    }
+    section .row2,.row3,.row4,.row5{
+        margin-top: 20px;
+    }
+}

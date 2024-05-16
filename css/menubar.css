@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+ 
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #ffffff;
+}
+
+nav {
+    position: relative;
+    background: #000000;
+    height: 70px;
+    clear: both;
+    z-index: 1;
+    
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/*โลโก้*/
+nav .logo {
+    float: left;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 30px;
+    
+}
+
+/*เมนู*/
+nav ul {
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    
+}
+/* เมนูรถkawa */
+nav.kawa-nav2 ul{
+  float: left;
+  padding-left:30%;
+  list-style: none;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  
+}
+nav.kawa-nav2 ul li a:hover{
+  color: rgb(10, 197, 10);
+}
+
+/*เมนูหน้าหลัก แบรนด์*/
+nav ul li {
+    display: inline-block;
+    background: #000000;
+    margin: 0 5px;
+}
+
+/*หน้าหลัก แบรนด์ ลิงค์ทั้งหมด*/
+nav ul li a {
+    color: white;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+nav ul li.type {
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+
+/*หน้าหลัก แบรนด์ ลิงค์ทั้งหมด เอาเมาส์ไปชี้*/
+nav ul li a:hover {
+    color: rgb(117, 117, 117);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/*dropdown*/
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid papayawhip;
+    opacity: 0;
+    /*:ซ่อน*/
+    visibility: hidden;
+    /*:ซ่อน*/
+    transition: top .3s;
+}
+
+/*ulทั้งหมด*/
+nav ul ul ul {
+    border-top: none;
+}
+
+/*dropdownแสดงออกมา*/
+nav ul li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*dropdownชั้นที่2*/
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 200px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+nav ul ul li a {
+    line-height: 50px;
+}
+
+/*dropdownชั้นที่3*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 200px;
+}
+.show,
+.icon,
+#btn,#btn-1,#btn-2,#btn-3,#btn-4,#btn-5,#btn-6 {
+    display: none;
+}
+
+.bi-list {
+    font-size: 15px;
+    margin-left: 40px;
+}
+
+
+/*ด้านบนสุด บัญชี*/
+.header{
+  float: right;
+  clear: both;
+  padding: 5px 60px 5px ;
+  font-size: 15px;
+  background-color: rgb(51, 51, 51);
+  width: 100%;
+  text-align: right;
+}
+.header a{
+  color: #ffffff;
+
+}
+.header a:hover{
+  color: rgb(papayawhip);
+}
+.bi-heart,.bi-bag{
+  font-size: 20px;
+}
+section form h3{
+  text-align: center;
+}
+/*สีของปุ่มsubmit*/
+.btn{
+  background-color: #000000;
+}
+
+
+
+/*จอipad*/
+@media screen and (max-width: 992px) {
+    nav ul{
+        margin-right: 0px;
+        float: left;
+        width: 100%;
+        background-color: #000000;
+        position: relative;
+      }
+      nav .logo{
+        padding-left: 30px;
+        width: 100%;
+      }
+      .show + a, ul{
+        display: none;
+      }
+      nav ul li{
+        padding: 0;
+        margin:auto;
+      }
+      nav ul li,nav ul ul li{
+        display: block;
+       
+        top: 0;
+      }
+      .show{
+        display: block;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+      }
+      .show:hover{
+        color: papayawhip;
+      }
+      .icon{
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        cursor: pointer;
+        font-size: 25px;
+      }
+      nav ul ul{
+        top: 70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        clear: both;
+      }
+      nav ul ul a{
+        padding-left: 0px;
+      }
+      nav ul ul ul a{
+        padding-left: 80px;
+      }
+      nav ul ul ul li{
+        position: static;
+      }
+      [id^=btn]:checked + ul{
+        display: block;
+      }
+      nav ul ul li{
+        border-bottom: 0px;
+      }
+      span.cancel:before{
+        content: '\f00d';
+      }
+      /*ด้านบนสุด บัญชี*/
+      .header{
+        margin: 0;
+        font-size: 0.8em;
+        background-color: rgb(51, 51, 51);
+        width: 100%;
+        text-align: right;
+      }
+      .header a:hover{
+        color: papayawhip
+        ;
+      }
+      .bi-heart,.bi-bag{
+        font-size: 20px;
+      }
+      
+}
+/*จอโทรศัพท์*/
+@media screen and (max-width: 576px) {
+  nav ul{
+    margin-right: 0px;
+    float: left;
+    width: 100%;
+    background-color: #000000;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+    font-size: 1em;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li{
+    padding: 0;
+    margin:auto;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+   
+    top: 0;
+  }
+  .show{
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+    width: auto;
+  }
+  .show:hover{
+    color: papayawhip;
+  }
+  .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    clear: both;
+  }
+  nav ul ul a{
+    padding-left: 0px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+  /*ด้านบนสุด บัญชี*/
+  .header{
+    float: right;
+    clear: both;
+    margin: 0;
+    padding: 5px 10px 5px ;
+    font-size: 0.5em;
+    background-color:rgb(51, 51, 51);
+    width: 100%;
+    text-align: right;
+   
+  }
+  .header a:hover{
+    color: papayawhip;
+  }
+  
+  .bi-heart,.bi-bag{
+    font-size: 0.7em;
+  }
+}

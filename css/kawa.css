@@ -1,0 +1,45 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+.bgimg-1 {
+  background-position: center;
+  background-size:auto;
+  background-image: url("./img_css/Kawa\ Z400.jpg");
+  min-height: 85%;
+}
+.bgimg-2 {
+  background-position: center;
+  background-size:auto;
+  background-image: url("./img_css/zx\ wall.jpg");
+  min-height: 85%;
+}
+.bgimg-3 {
+  background-position: center;
+  background-size:auto;
+  background-image: url("./img_css/z\ wall.jpg");
+  min-height: 85%;
+}
+.bgimg-4 {
+  background-position: center;
+  background-size:auto;
+  background-image: url("./img_css/versys\ wall.jpg");
+  min-height: 85%;
+}
+.bgimg-5 {
+  background-position: center;
+  background-size:auto;
+  background-image: url("./img_css/R1wall.jpg");
+  min-height: 85%;
+}
+.w3-bar .w3-button {
+  padding: 16px;
+}
+  div.a {
+  text-indent: 50px;
+}
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
